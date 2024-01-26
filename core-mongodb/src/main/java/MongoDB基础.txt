@@ -1,0 +1,13 @@
+MongoDB: document oriented database
+  Data is stored in documents and all documents are grouped in collections
+MongoDB Atlas Cluster
+  Fully-managed cloud database service that hosts your data on MongoDB clusters.
+
+TODO. MongoDB配置和安装: 永久本地安装或docker容器安装(用于测试)
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/
+
+MongoDB完整教程文档:
+https://docs.mongodb.com/manual/
+https://github.com/mongodb/homebrew-brew
+https://learn.mongodb.com/learning-paths/using-mongodb-with-java
