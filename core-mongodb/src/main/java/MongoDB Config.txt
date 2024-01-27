@@ -1,0 +1,39 @@
+TODO. homebrew永久本地安装
+% brew tap mongodb/brew 将Github存储库添加到Homebrew跟踪的公式列表中
+  Cloning into '/opt/homebrew/Library/Taps/mongodb/homebrew-brew'...
+% brew update
+% brew install mongodb-community 安装最新版本, 包含mongodb-community Server, Shell, Database Tools
+% brew services start mongodb/brew/mongodb-community
+% brew services start mongodb-community
+% brew services list 启动为macOS service
+% ps aux | grep mongod 自定义启动为后台进程
+
+% brew services stop mongodb-community
+% brew uninstall mongodb-community
+
+mongodb数据库包含的三种配置文件
+- Configuration file: /opt/homebrew/etc/mongod.conf
+  systemLog:
+    destination: file
+    path: /opt/homebrew/var/log/mongodb/mongo.log
+    logAppend: true
+  storage:
+    dbPath: /opt/homebrew/var/mongodb
+  net:
+    bindIp: 127.0.0.1, ::1
+    ipv6: true
+- Log directory path: /opt/homebrew/var/log/mongodb
+- Data directory path: /opt/homebrew/var/mongodb
+
+TODO. docker容器安装测试
+Pull the MongoDB Docker Image
+% docker pull mongodb/mongodb-community-server
+
+Run the Image as a Container
+% docker run --name mongo -d mongodb/mongodb-community-server:latest
+
+Connect to the MongoDB with mongosh 以交换式的方式进入容器中，通过行
+% docker exec -it mongo mongosh
+  Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1
+  Using MongoDB:		7.0.4
+  Using Mongosh:		2.1.1

@@ -1,0 +1,57 @@
+TODO. mongosh: mongodb Shell
+Run mongosh to connect mongodb server running on localhost with default port of 27017.
+
+% mongosh
+  Connecting to:	mongodb://127.0.0.1:27017/?directConnection=true&appName=mongosh+2.1.1
+  Using MongoDB:	7.0.2
+  Using Mongosh:	2.1.1
+> use testdb 创建新的DB并且切换数据库
+> db 显示当前所在数据库
+> show dbs   显示所有DBs, 不包含空的数据库
+  admin   40.00 KiB
+  config  92.00 KiB
+  local   40.00 KiB
+
+> db.users.insertOne({firstname: "chen", lastname: "tong"}) 为插入的json数据自动生成ObjectId
+  {
+    acknowledged: true,
+    insertedId: ObjectId('65b5069f516c9dcb23ec84b2')
+  }
+
+> db.users.insertOne({firstname: "chen4", lastname:"tong4", age: 30}) 支持存储不同格式的Json数据
+
+> db.users.find() 返回当前DB下users集合中的所有Documents
+[
+  {
+    _id: ObjectId('65b5069f516c9dcb23ec84b2'),
+    firstname: 'chen',
+    lastname: 'tong'
+  },
+  {
+    _id: ObjectId('65b508eeb3375d4caa7d53f6'),
+    firstname: 'chen1',
+    lastname: 'tong1'
+  },
+  {
+    _id: ObjectId('65b509b4cf3a3c784557fb29'),
+    firstname: 'chen4',
+    lastname: 'tong4',
+    age: 30
+  }
+]
+
+> db.users.find({firstname: "chen"}) 根据过滤条件匹配json数据
+  [
+    {
+      _id: ObjectId('65b5069f516c9dcb23ec84b2'),
+      firstname: 'chen',
+      lastname: 'tong'
+    }
+  ]
+
+> db.users.updateOne({firstname: "chen1"}, 根据指定的过滤条件进行修改
+  {
+    $set: { lastname: "tong100" }
+  })
+
+> db.users.deleteOne({firstname: "chen3"})
