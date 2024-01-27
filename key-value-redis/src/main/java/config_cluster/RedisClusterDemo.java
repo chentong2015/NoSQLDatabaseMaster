@@ -5,7 +5,7 @@ import redis.clients.jedis.*;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ArchitectRedisCluster {
+public class RedisClusterDemo {
 
     // 测试单体Redis Server服务的操作
     private static void testSingleRedisServer() {

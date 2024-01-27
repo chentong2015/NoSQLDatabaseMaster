@@ -1,5 +1,4 @@
-TODO: Redis所有key都是string类型
- 对应到C语言的实现SDS: Simple Dynamic String --> "Raw"
+TODO: Redis所有key都是string类型, 对应到C语言SDS(Simple Dynamic String)
 1. 二进制安全的数据结构
 2. 内存的预分配操作，避免频繁的内存分配
      int free: 0              还剩余多少空间，以进行数据的"动态扩容"
@@ -25,7 +24,7 @@ struct __attribute__ sdshdr32 {}
 struct __attribute__ sdshdr64 {}
 
 TODO: Redis的value里面又套了一层k-v性数据
-      不同的value数据类型对应实际编码的对象, 底层encoding进行编码优化
+  不同的value数据类型对应实际编码的对象, 底层encoding进行编码优化
 1. 简单的动态字符串
 2. hash表          O(1)
 3. ZipList压缩列表  O(n): 把指针去掉后的双向链表，类似于数组，添加相对的偏移值

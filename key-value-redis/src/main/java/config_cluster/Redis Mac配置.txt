@@ -1,0 +1,23 @@
+1. 通过homebrew来直接安装
+% brew install redis
+  To start redis now and restart at login:
+  % brew services start redis
+  If you don't want/need a background service you can just run:
+     /opt/homebrew/opt/redis/bin/redis-server
+     /opt/homebrew/etc/redis.conf
+  Summary
+     /opt/homebrew/Cellar/redis/7.2.4
+
+2. 通过docker运行镜像来测试
+% docker search redis
+% docker pull redis
+
+----------------------------------------------------------------
+% redis-server 启动服务端
+% redis-server redis.conf 使用特殊的配置文件来启动服务
+% Ctrl+C
+
+% redis-cli 启动客户端
+% redis-cli --raw 以原始的形式来显示特殊字符
+% redis-cli -p 6380 连接指定端口号的服务
+% quit

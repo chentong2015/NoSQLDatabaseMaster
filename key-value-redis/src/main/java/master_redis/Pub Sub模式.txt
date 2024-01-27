@@ -1,0 +1,8 @@
+将消息发送到指定频道，通过订阅来接收到消息
+支持多个订阅者订阅同一个频道
+1. 消息无法持久化
+2. 无法记录历史的消息，只能用于最新即时通讯
+
+> PUBLISH channel message
+> SUBSCRIBE channel
+> SUBSCRIBE channel

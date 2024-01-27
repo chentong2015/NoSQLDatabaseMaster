@@ -1,3 +1,9 @@
+Redis使用方式：
+1. CLI - redis-cli
+2. API - Client SDK
+3. GUI - RedisInsight
+
+Redis应用场景：
 1. 缓存中间件(单机的QPS每秒处理几万请求)
    - 不适合存储大量的信息，只暂存关键的信息
    - 操作是微秒级别的，对于某些业务场景下，性能明显优于MySQL数据库
