@@ -1,4 +1,4 @@
-package config_cluster;
+package replication;
 
 import redis.clients.jedis.*;
 

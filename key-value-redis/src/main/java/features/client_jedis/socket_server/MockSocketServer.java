@@ -1,4 +1,4 @@
-package projects.client_jedis.socket_server;
+package features.client_jedis.socket_server;
 
 import java.io.BufferedReader;
 import java.io.IOException;

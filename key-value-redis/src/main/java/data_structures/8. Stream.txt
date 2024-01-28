@@ -1,0 +1,18 @@
+Stream数据结构：轻量级的消息队列
+- 支持消息的持久化，支持记录历史消息
+
+> XADD key * message_name message_value       创建指定名称的消息队列，并在消息队列中添加value数据
+  "190284298448-0"                            使用自动生成id，Redis保证生成的id是自增的
+> XADD key int-int message_name message_value 使用整数(时间戳—序列号)自定义生成的id
+> XLEN key            查看指定消息队列中的消息数量
+> XRANGE key - +      显示消息队列中从start到stop内容，-+表示显示全部消息
+> XDEL key message_id 删除消息队列中指定id
+> XRIM key MAXLEN 0   删除key消息队列中全部消息
+
+> XREAD count 2 BLOCK 1000 STREAMS key 0 从指定的消息队列中从头读取两条消息, 无法读取则会阻塞1s
+> XREAD count 2 BLOCK 1000 STREAMS key $ 读取从现在开始后的消息
+
+> XGROUP CREATE key group_name 1 创建id为1的消费者组
+> XINFO GROUPS group_name        查看消费者组的信息
+> XGROUP CREARECONSUMER key goupe_name consumer_name 在执行的消费者组中添加消息者
+> XREADGROUP group_name consumer_name COUNT 2 BLOCK 3000 STREAMS key 消费者组中消费者读取指定消息队列的消息

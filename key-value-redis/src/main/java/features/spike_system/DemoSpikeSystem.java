@@ -1,4 +1,4 @@
-package projects.spike_system;
+package features.spike_system;
 
 import java.util.concurrent.ConcurrentHashMap;
 

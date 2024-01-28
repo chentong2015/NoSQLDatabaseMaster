@@ -1,1 +1,11 @@
-HyperLogLog: 用来做基数统计的算法
+HyperLogLog: 用来做基数(非重复的数)统计的算法
+- 使用随机算法存在误差，但是占用内存小
+- 适用于数据量大，但是对于精确度不高的计算，例如统计某个次的搜索次数
+
+> PFADD key git docker redis 在指定key中添加3个基数
+> PFCOUNT key                统计指定key的基数
+
+> PFADD key2 java c++
+> PFMERGE result key key2    合并两个key一起做基数统计
+
+

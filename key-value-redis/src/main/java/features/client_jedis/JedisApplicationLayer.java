@@ -1,4 +1,4 @@
-package projects.client_jedis;
+package features.client_jedis;
 
 import java.io.IOException;
 

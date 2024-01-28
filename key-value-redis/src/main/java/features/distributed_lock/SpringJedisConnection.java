@@ -1,4 +1,4 @@
-package projects.distributed_lock;
+package features.distributed_lock;
 
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

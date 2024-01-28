@@ -1,1 +1,8 @@
 GeoSpatial 存储地理位置信息的数据结构，支持对地理位置的计算操作
+
+> GEOADD city 190.00 612.12 city_name   添加指定城市的地理位置信息
+> GROPOS city city_name                 获取指定城市的地理位置
+> GEODIST city city_name1 city_name2    计算两个位置之间的距离
+> GEODIST city city_name1 city_name2 KM
+
+> GEOSEARCH city FROMMEMBER city_name1 BYRADIUS 300 KM 以指定城市为中心范围300KM的所有城市

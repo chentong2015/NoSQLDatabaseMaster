@@ -1,7 +1,0 @@
-Redis支持事务：将多个命令封装成一个命令来执行
-对于批量的指令，要么全部执行或者全部撤销
-  MULTI
-    SET
-    LPUSH
-    SADD
-  EXEC/DISCARD

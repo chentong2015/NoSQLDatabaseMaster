@@ -1,0 +1,24 @@
+Redis主要两种持久化方式
+1. RDB(Redis Database):
+   - 指定的时间间隔执行数据集的时间点快照，适用于数据备份和灾难恢复
+   - RDB在快照时间段内Redis处于阻塞状态，无法对外提供服务
+   > save   通过命令行手动执行快照
+   > bgsave 单独创建一个子进程来持久化数据，避免主进程的阻塞
+            Redis父进程fork()派生一个的子进程需要时间(当数据集很大时)，同样会有性能损耗
+2. AOF(Append-Only-File):
+   以日志的形式来追加文件，AOF日志是仅附加日志，通过AOF中的命令重现数据库中的内容
+   AOF文件通常比相同数据集的等效RDB文件大，AOF可能比RDB慢
+
+TODO. Redis持久化配置redis.conf
+# Save the DB to disk.
+# save <seconds> <changes> 配置多长时间内有多少次修改便执行一次快照
+#
+# Unless specified otherwise, by default Redis will save the DB:
+#   * After 3600 seconds (an hour) if at least 1 key changed
+#   * After 300 seconds (5 minutes) if at least 100 keys changed
+#   * After 60 seconds if at least 10000 keys changed
+# save 3600 1
+# save 300 100
+# save 60 10000
+#
+# appendonly no 配置激活AOF附加日志
