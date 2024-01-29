@@ -1,4 +1,4 @@
-package replication;
+package leader_follower;
 
 import redis.clients.jedis.*;
 
