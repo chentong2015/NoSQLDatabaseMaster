@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/core-mongodb/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/core-mongodb/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/key-value-redis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/key-value-redis/src/main/java/Redis简介.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/key-value-redis/src/main/java/features/persistence/Redis缓存持久化.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/key-value-redis/src/main/java/replication/Redis集群架构.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/key-value-redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mongodb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mongodb/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

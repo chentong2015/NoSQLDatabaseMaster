@@ -1,3 +1,5 @@
+Redis is an in-memory data structure store that offers a rich set of features.
+
 Redis使用方式：
 1. CLI - redis-cli
 2. API - Client SDK
