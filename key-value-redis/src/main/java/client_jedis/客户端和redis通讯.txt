@@ -1,0 +1,6 @@
+Redis Java Client: Jedis & Lettuce
+TODO: 底层是如何实现Jedis <-> Redis之间的通讯, 自定义MyJedis的通讯实现
+1. 应用层     操作层API         ===> 提供用户调用的公开接口
+2. 消息处理层  Message Protocol ===> 提供Redis Server通讯的特殊协议 RESP(Redis Serialization Protocol)
+3. 传输层     TCP/UDP          ===> 网络传输层使用的可靠协议
+4. 比特流传输

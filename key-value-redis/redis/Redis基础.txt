@@ -1,0 +1,19 @@
+Redis is an in-memory data structure store that offers a rich set of features.
+1. CLI - redis-cli
+2. API - Client SDK
+3. GUI - RedisInsight
+
+Redis应用场景：
+1. 缓存中间件(单机的QPS每秒处理几万请求)
+   - 不适合存储大量的信息，只暂存关键的信息
+   - 操作是微秒级别的，对于某些业务场景下，性能明显优于MySQL数据库
+   - 统一存储多态服务器的会话信息
+2. 分布式系统组件
+   - 分布式计数器: 对String进行频繁的自增和自减
+   - 分布式ID生成器: 一次请求一个大一点的步长incr 2000
+   - 分布式队列，阻塞队列
+   - 分布式锁: 互联网秒杀, 抢优惠券
+3. 特殊场景
+   重构数据存储的方式，不同场景使用不同数据类型来实现
+   - 海量数据存储: bitmap
+   - 热点数据存储，排行榜

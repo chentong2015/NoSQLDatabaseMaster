@@ -1,0 +1,33 @@
+Redis Sentinel Guard 哨兵模式:
+解决在主丛复制结构中主节点的自动切换问题
+哨兵会以独立的进程运行在Redis集群中，用于监控集群中的各个节点是否运行正常
+1. Monitor: 通过不断发送命令来监控节点
+2. Notify: 通过发布订阅模式来通知节点的故障
+3. Migration: 自动故障转移，将从节点提升成主节点
+
+sentinel.conf 哨兵节点的配置文件：配置监控的主节点name host port, 设置只要一个从节点同意便可以故障转移
+sentinel monitor master 127.0.0.1 6379 1
+> redis-sentinel sentinel.conf
+
+TODO. 哨兵节点的高可用
+哨兵节点本身是一个进程，也可能有挂掉的风险，无法保证真正的高可用
+实际项目中通常创建3个哨兵节点，通过选举模式来产生leader，在领导者挂掉之后选举新的leader
+
+TODO. 哨兵模式的并发场景
+并发场景缺点: 对外提供的写只有一台，在挂掉的时候切换时间内"访问瞬断"的情况
+高可用cluster集群模式(相对的)：搭建3主3从的Redis实例，模拟分布式场景
+          client         client
+               JedisCluster
+         master           master          master        至少单数master结点(选举)，最多集群支持1000台
+     slave  slave      slave  slave     slave   salve   多个集群的数据是分开
+  1. 在小集群中"瞬断切换"的时候，也是相对的高可用
+  2. 对集群做水平扩展或者减小一个集群，比较麻烦
+  3. 在单个的主从结点群中，存在选举机制Election
+  4. 集群之间通讯机制: 集中式 & gossip
+
+根据key来定位存储位置, 每个master结点存储的数据是分开存储的，数据分片不重复
+
+数据操作验证/集群内部会重定向到不同的master机器上执行(类似于轮询的负载均衡的算法)
+  127.0.0.1:8001> set name chentong
+  -> Redirected to slot [5798] located at 127.0.0.1:8002
+     OK
