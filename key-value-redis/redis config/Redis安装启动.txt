@@ -21,7 +21,7 @@ TODO. Linux系统安装和启动
 > /src/redis-cli shutdown
 
 TODO. Mac安装启动：通过homebrew来直接安装
-% brew install redis
+> brew install redis
   To start redis now and restart at login:
     % brew services start redis
   If you don't want/need a background service you can just run:
