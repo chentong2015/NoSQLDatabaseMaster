@@ -1,4 +1,4 @@
-package client_jedis.framework;
+package redis_client.framework;
 
 import java.io.*;
 import java.net.Socket;

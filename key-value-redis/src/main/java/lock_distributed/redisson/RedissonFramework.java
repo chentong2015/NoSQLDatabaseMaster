@@ -1,6 +1,6 @@
-package distributed_lock.redisson;
+package lock_distributed.redisson;
 
-import distributed_lock.SpringJedisConnection;
+import lock_distributed.SpringJedisConnection;
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
 import org.redisson.config.Config;

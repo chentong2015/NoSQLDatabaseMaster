@@ -1,4 +1,4 @@
-package distributed_lock;
+package lock_distributed;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
 

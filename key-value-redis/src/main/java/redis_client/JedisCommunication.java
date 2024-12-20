@@ -1,6 +1,6 @@
-package client_jedis;
+package redis_client;
 
-import client_jedis.framework.JedisApplicationLayer;
+import redis_client.framework.JedisApplicationLayer;
 
 import java.io.IOException;
 

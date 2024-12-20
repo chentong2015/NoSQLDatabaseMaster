@@ -1,24 +1,38 @@
 import redis.clients.jedis.*;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class RedisClientDemo {
 
-    // 测试单体Redis Server服务的操作
     public static void main(String[] args) {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
-        // jedis.auth("password");  使用配置文件中自定义的authentication password进行身份认证
-        // jedis.auth("root", "requirepass");
-        jedis.set("key1", "my key");
-        System.out.println(jedis.get("key1"));
-        System.out.println(jedis.get("name"));
-        jedis.close();
-    }
 
-    // 测试使用Jedis连接池访问单体Redis服务
-    private static void testSingleRedisServerWithJedisPool() {
-        JedisPool pool = new JedisPool("8.209.74.47", 6379);
-        Jedis jedis = pool.getResource();
-        System.out.println(jedis.get("name"));
+        // Set and Get String value
+        jedis.set("key1", "my key");
+        String value = jedis.get("key1");
+        System.out.println(value);
+
+        // Set and Get List values
+        // jedis.rpush("mylist", "item1", "item2");
+        List<String> values = jedis.lrange("myList", 0, -1);
+        for (String item: values) {
+            System.out.println(item);
+        }
+
+        // Set and Get Hash Key values
+        Map<String, String> map = new HashMap<>();
+        map.put("hash-key1", "hash-value1");
+        map.put("hash-key2", "hash-value2");
+        map.put("hash-key3", "hash-value3");
+        jedis.hset("myHash", map);
+        Map<String, String> mapAll = jedis.hgetAll("myHash");
+        for (Map.Entry<String, String> entry: mapAll.entrySet()) {
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
+
         jedis.close();
-        pool.close();
     }
 }

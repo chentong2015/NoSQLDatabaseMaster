@@ -1,4 +1,4 @@
-package cluster;
+package redis_api;
 
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.JedisCluster;
@@ -7,7 +7,7 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.util.HashSet;
 import java.util.Set;
 
-public class RedisClusterDemo {
+public class RedisClusterAPI {
 
     // 测试Redis Cluster集群
     private static void testRedisCluster() {

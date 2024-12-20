@@ -24,18 +24,19 @@
     </repositories>
 
     <dependencies>
-       <!-- Spring Data Redis: 封装到XXXRedisTemplate -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.6.3</version>
+        </dependency>
+
+        <!-- Spring Data Redis: 封装到XXXRedisTemplate -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
             <version>3.1.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>3.6.3</version>
-        </dependency>
         <!-- <dependency>
             <groupId>io.lettuce</groupId>
             <artifactId>lettuce-core</artifactId>
