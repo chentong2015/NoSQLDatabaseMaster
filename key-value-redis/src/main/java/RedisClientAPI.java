@@ -1,5 +1,3 @@
-package redis_api;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 

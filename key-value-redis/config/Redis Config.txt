@@ -42,4 +42,9 @@ TODO. 通过docker运行镜像来测试
 > docker search redis
 > docker pull redis
 > docker run -d --name redis-server -p 6379:6379 redis:latest
-> docker exec -it _id_container redis-cli 以交互模式进入容器
+以交互模式进入容器
+> docker exec -it _id_container redis-cli
+&
+> docker exec -it _id_container bash
+> redis-cli
+> auth pwd_ 使用密码进行认证

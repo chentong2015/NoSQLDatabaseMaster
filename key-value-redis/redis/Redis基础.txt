@@ -1,4 +1,6 @@
-Redis is an in-memory data structure store that offers a rich set of features.
+Redis is an in-memory database that persists on disk.
+The data model is key-value, support many kind of values:
+(Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.)
 1. CLI - redis-cli
 2. API - Client SDK
 3. GUI - RedisInsight
