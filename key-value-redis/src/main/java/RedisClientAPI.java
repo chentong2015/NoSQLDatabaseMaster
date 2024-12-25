@@ -9,6 +9,7 @@ public class RedisClientAPI {
     // jedis.auth("root", "requirepass");
     public static void main(String[] args) {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
+        System.out.println(jedis.get("key1"));
         jedis.set("key1", "my key");
         System.out.println(jedis.get("key1"));
         System.out.println(jedis.get("name"));
