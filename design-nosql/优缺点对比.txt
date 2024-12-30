@@ -1,0 +1,10 @@
+Relational Database benefits:
+- 结构清晰，使用起来方便
+- 数据查询方便，容易维护
+- 使用成本相对较高
+
+No-Relational Database benefits:
+- 可以存储任意非结构化数据(JSON, Key-Value, XML ...)
+- 高性能低延迟(Low-latency)
+- 可以存储大量数据(Large amount of data)
+- 使用成本相对较高(Learning Cost)
