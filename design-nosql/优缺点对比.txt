@@ -1,6 +1,6 @@
 Relational Database benefits:
-- 结构清晰，易维护
-- 数据查询方便，例如需要JOIN数据
+- 结构清晰，数据查询方便(例如JOIN不同表数据)
+- 不容易Scale扩展，数据分片等问题
 
 No-Relational Database benefits:
 - 可以存储任意非结构化数据(JSON, Key-Value, XML ...)
