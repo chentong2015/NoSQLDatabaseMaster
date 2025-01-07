@@ -1,0 +1,13 @@
+Mongodb:
+Document oriented database 面向文档存储的数据库
+Data is stored in documents and all documents are grouped in collections
+
+Mongodb Atlas Cluster
+Fully-managed cloud database service that hosts your data on mongodb clusters.
+
+
+https://docs.mongodb.com/manual/
+https://github.com/mongodb/homebrew-brew
+
+https://www.mongodb.com/docs/drivers/java/sync/current/
+https://learn.mongodb.com/learning-paths/using-mongodb-with-java

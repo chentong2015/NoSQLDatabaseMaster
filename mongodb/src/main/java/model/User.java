@@ -1,11 +1,11 @@
-package com.mongodb.core;
+package model;
 
-// TODO. 从Json解析成java对象时需要提供默认的无参构造器
 public class User {
 
     private String firstname;
     private String lastname;
 
+    // TODO. 从Json解析成java对象时需要提供默认的无参构造器
     public User() {
     }
 

@@ -1,5 +1,3 @@
-package com.mongodb.core;
-
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
@@ -7,16 +5,12 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import org.bson.Document;
-import org.bson.codecs.configuration.CodecProvider;
-import org.bson.codecs.configuration.CodecRegistry;
-import org.bson.codecs.pojo.PojoCodecProvider;
 import org.bson.conversions.Bson;
 
-import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
-public class MongodbServerDemo {
+public class DocumentInsertion {
 
     private static String remoteUrl = "mongodb+srv://<username>:<password>@***.mongodb.net/test-db";
     private static String localUrl = "mongodb://localhost:27017"; // 无用户名和密码

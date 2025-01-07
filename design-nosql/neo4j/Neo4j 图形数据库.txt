@@ -1,0 +1,8 @@
+Neo4j - Graph Database & Analytics
+Neo4j is a graph database management system (GDBMS)
+
+以图形方式来存储数据结构以及数据之间的关联
+The data elements Neo4j stores
+- Nodes
+- Edges connecting them (Links)
+- Attributes of nodes and edges.
