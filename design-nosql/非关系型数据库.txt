@@ -1,8 +1,0 @@
-Cassandra: Apache Open Source NoSQL distributed database
-  Free and open-source, distributed, wide-column store, NoSQL database management system
-  https://en.wikipedia.org/wiki/Apache_Cassandra
-  https://cassandra.apache.org/_/index.html
-
-ShardingSphere: Apache开源分布式数据库生态项目
-  https://shardingsphere.apache.org/index_zh.html
-  https://www.bilibili.com/video/BV1nV41177Qn?p=9

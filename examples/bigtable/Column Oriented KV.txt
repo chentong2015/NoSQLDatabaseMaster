@@ -1,0 +1,6 @@
+Bigtable 一种键值对形式的宽列存储区，非常适合快速访问结构化、半结构化或非结构化数据
+
+BigTable combines multiple files into one block to store on the disk
+and is very efficient in reading a small amount of data.
+
+https://cloud.google.com/bigtable

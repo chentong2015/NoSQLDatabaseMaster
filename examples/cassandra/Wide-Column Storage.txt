@@ -1,0 +1,6 @@
+Cassandra:
+Apache Open Source NoSQL distributed database
+Free and open-source, distributed, wide-column store, NoSQL database management system
+
+https://en.wikipedia.org/wiki/Apache_Cassandra
+https://cassandra.apache.org/_/index.html
